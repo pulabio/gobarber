@@ -5,6 +5,14 @@ class UserController {
     const user = await User.create(req.body);
 
     return res.json(user);
+    const { id, name, email, provider } = await User.create(req.body);
+
+    return res.json({
+      id,
+      name,
+      email,
+      provider,
+    });
   }
 }
 
